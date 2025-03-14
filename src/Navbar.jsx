@@ -4,12 +4,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { FaPhone, FaEnvelope, FaSignOutAlt } from "react-icons/fa";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    localStorage.removeItem("auth");
-    navigate("/login");
-  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -111,16 +105,6 @@ const Navbar = () => {
               </a>
             </li>
             {/* Logout button */}
-            <li className="nav-item">
-              <button
-                className="btn btn-outline-danger d-flex align-items-center"
-                onClick={handleLogout}
-                style={{ fontSize: "16px" }}
-              >
-                <FaSignOutAlt className="me-2" size={20} />
-                Logout
-              </button>
-            </li>
           </ul>
         </div>
       </div>
